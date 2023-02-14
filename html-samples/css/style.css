@@ -1,0 +1,101 @@
+.header{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.navigation{
+    margin: 0 auto;
+}
+
+.title{
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.menu-options {
+    display:flex;
+    justify-content: space-between;
+}
+
+.menu-options-item{
+    margin: 10px 5px;
+}
+
+/*CONTAINER*/
+
+.container{
+    width:80%;
+    margin: 0 auto;
+}
+
+.container__buttons-nav{
+    text-align:right;
+}
+
+.data{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.data__input-group{
+    margin: 10px;
+    flex-wrap: nowrap;
+}
+.data__input-group label{
+    display: block;
+}
+
+.container__buttons{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 30px;
+}
+
+#id{
+    width: 50px;
+}
+
+#nome{
+    width: 350px;
+}
+
+#sobrenome{
+    width:300px;
+}
+
+#endereco{
+    width: 500px;
+}
+
+.data-find{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.title-find{
+    margin: 0 20px;
+}
+
+.group__radios{
+    display:flex;
+    border: 1px solid #000;
+    width: 50%;
+}
+
+.checkbox{
+    padding: 20px;
+    margin: 0 10px;
+}
+
+.search_box{
+    width: 500px;
+    margin:20px;
+}
+
+.table-data{
+    display: block;
+}

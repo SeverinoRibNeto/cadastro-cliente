@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente</title>
+    <link href=" https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css " rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <h2 class="card-title title">Cadastro de Clientes</h2>
+            <ul class="menu-options">
+                <li class="menu-options-item">
+                    <a href="#" class="button__menu-options btn btn-outline-primary">Cadastrar Cliente</a>
+                </li>
+                <li class="menu-options-item">
+                    <a href="buscar.html" class="button__menu-options btn btn-outline-primary">Buscar Cliente</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="data-find">
+            <h4 class="title-find">Filtrar Buscar Por:</h4>
+            <div class="group__radios">
+                <div class="checkbox">
+                    <input class="form-check-input" type="radio" name="filter_check" id="id_check" value="id_check">
+                    <label class="form-check-label" for="id_check">
+                        Id
+                    </label>                  
+                </div>
+                <div class="checkbox">
+                    <input class="form-check-input" type="radio" name="filter_check" id="nome_check" value="nome_check">
+                    <label class="form-check-label" for="nome_check">
+                        Nome
+                    </label>                  
+                </div>
+                <div class="checkbox">
+                    <input class="form-check-input" type="radio" name="filter_check" id="sobrenome_check" value="sobrenome_check">
+                    <label class="form-check-label" for="sobrenome_check">
+                        Sobrenome
+                    </label>                  
+                </div>
+            </div>
+            <div class="find-search">
+                <label for="find_text">Buscar: </label>
+                <input type="text" id="find_text" name="find_text" class="search_box">
+                <button class="button-search btn btn-primary btn-lg">Buscar</button>
+            </div>
+            <div class="table-data">
+                <table>
+                    <thead>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Sobrenome</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Severino</td>
+                            <td>Ribeiro</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    
+</body>
+</html>
