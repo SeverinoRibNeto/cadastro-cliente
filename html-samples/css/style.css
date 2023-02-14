@@ -97,5 +97,23 @@
 }
 
 .table-data{
-    display: block;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.table-data table,td,tr,th{
+    border: 1px solid #000;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+.table-data table tr:hover{
+    background-color: #feffb7;
+}
+
+.table-data th{
+    color:white;
+    background-color:black;
+    font-weight: bold;
 }
