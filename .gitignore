@@ -1,0 +1,9 @@
+# Files
+
+#*.js
+#file.html
+
+# Folders
+node_modules/
+venv/
+.mypy_cache/
