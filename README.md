@@ -1,2 +1,2 @@
-# client-register
-A client register using html, css, JS and Python
+# Cadastro de Clientes
+Essa é uma aplicação Django para fazer o cadastro, alteração, busca e leitura de informações de clientes.
