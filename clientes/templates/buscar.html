@@ -1,0 +1,76 @@
+<!--Estende o template base-->
+{% extends 'base.html' %}
+
+<!--Bloco para o titulo da página-->
+{%block title%}Buscar Cliente{%endblock%}
+
+<!--Bloco de conteúdo-->
+{%block conteudo%}
+<div class="container">
+    <div class="data-find">
+        <h4 class="title-find">Filtrar Buscar Por:</h4>
+        <div class="group__radios">
+            <div class="checkbox">
+                <input class="form-check-input" type="radio" name="filter_check" id="id_check" value="id_check">
+                <label class="form-check-label" for="id_check">
+                    Id
+                </label>                  
+            </div>
+            <div class="checkbox">
+                <input class="form-check-input" type="radio" name="filter_check" id="nome_check" value="nome_check">
+                <label class="form-check-label" for="nome_check">
+                    Nome
+                </label>                  
+            </div>
+            <div class="checkbox">
+                <input class="form-check-input" type="radio" name="filter_check" id="sobrenome_check" value="sobrenome_check">
+                <label class="form-check-label" for="sobrenome_check">
+                    Sobrenome
+                </label>                  
+            </div>
+        </div>
+        <div class="find-search">
+            <label for="find_text">Buscar: </label>
+            <input type="text" id="find_text" name="find_text" class="search_box">
+            <button class="button-search btn btn-primary btn-lg">Buscar</button>
+        </div>
+        <div class="table-data">
+            <table>
+                <thead>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>Data de Aniversário</th>
+                    <th>Endereço</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Severino</td>
+                        <td>Ribeiro</td>
+                        <td>29/01/1993</td>
+                        <td>Rua Lorem ipsum</td>
+                        <td>teste@test.com</td>
+                        <td>(00)00000-0000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Maria</td>
+                        <td>Aparecida</td>
+                        <td>27/01/1963</td>
+                        <td>Rua Lorem ipsum</td>
+                        <td>teste@test.com</td>
+                        <td>(00)00000-0000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+
+
+</div>
+{%endblock%}
