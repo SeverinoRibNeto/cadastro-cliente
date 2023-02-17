@@ -2,7 +2,7 @@
 
 #*.js
 #file.html
-
+.env
 # Folders
 node_modules/
 venv/
