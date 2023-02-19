@@ -10,5 +10,6 @@ urlpatterns = [
          views.atualiza_cliente, name='atualiza_cliente'),
     path('buscar/', views.buscar_cliente, name='buscar_cliente'),
     path('filtraCliente/',
-         views.filtra_cliente, name='filtra_cliente')
+         views.filtra_cliente, name='filtra_cliente'),
+    path('excluirCliente/<int:id>', views.excluir_cliente, name='excluir_cliente')
 ]
