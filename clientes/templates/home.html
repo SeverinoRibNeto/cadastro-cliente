@@ -43,7 +43,7 @@
     </div>
     <div class="container__buttons">
         <a class="btn btn-outline-warning" href="{% url 'altera_cliente' pessoa.id %}">Alterar</a>
-        <button class="btn btn-outline-danger">Apagar</button>
+        <a class="btn btn-outline-danger" href="{% url 'excluir_cliente' pessoa.id%}">Apagar</a>
         <button class="btn btn-outline-success" disabled>Salvar</button>
     </div>
 </div>
