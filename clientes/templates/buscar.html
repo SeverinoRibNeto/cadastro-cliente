@@ -8,6 +8,8 @@
 {%block conteudo%}
 <div class="container">
     <div class="data-find">
+    <form action="{% url 'filtra_cliente'%}" method="post">
+        {%csrf_token%}
         <h4 class="title-find">Filtrar Buscar Por:</h4>
         <div class="group__radios">
             <div class="checkbox">
@@ -32,8 +34,9 @@
         <div class="find-search">
             <label for="find_text">Buscar: </label>
             <input type="text" id="find_text" name="find_text" class="search_box">
-            <button class="button-search btn btn-primary btn-lg">Buscar</button>
+            <input type="submit" class="button-search btn btn-primary btn-lg" value="Buscar"></input>
         </div>
+    </form>
         <div class="table-data">
             <table>
                 <thead>
@@ -46,24 +49,17 @@
                     <th>Telefone</th>
                 </thead>
                 <tbody>
+                    {% for cliente in clientes%}
                     <tr>
-                        <td>1</td>
-                        <td>Severino</td>
-                        <td>Ribeiro</td>
-                        <td>29/01/1993</td>
-                        <td>Rua Lorem ipsum</td>
-                        <td>teste@test.com</td>
-                        <td>(00)00000-0000</td>
+                        <td>{{cliente.id}}</td>
+                        <td>{{cliente.nome}}</td>
+                        <td>{{cliente.sobrenome}}</td>
+                        <td>{{cliente.data_aniversario|date:'d/m/Y'}}</td>
+                        <td>{{cliente.endereco}}</td>
+                        <td>{{cliente.email}}</td>
+                        <td>{{cliente.telefone}}</td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Maria</td>
-                        <td>Aparecida</td>
-                        <td>27/01/1963</td>
-                        <td>Rua Lorem ipsum</td>
-                        <td>teste@test.com</td>
-                        <td>(00)00000-0000</td>
-                    </tr>
+                    {%endfor%}
                 </tbody>
             </table>
 
