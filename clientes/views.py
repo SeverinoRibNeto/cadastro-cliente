@@ -5,7 +5,10 @@ from .models import Pessoa
 
 def home_url(request):
     pessoa = Pessoa.objects.last()
-    return render(request, 'home.html', {'pessoa': pessoa})
+    if (pessoa):
+        return render(request, 'home.html', {'pessoa': pessoa})
+    else:
+        return render(request, 'home1.html')
 
 
 def cadastrar_cliente(request):
