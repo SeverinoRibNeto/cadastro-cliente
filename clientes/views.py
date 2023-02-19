@@ -59,5 +59,7 @@ def filtra_cliente(request):
     return render(request, 'buscar.html', {'clientes': clientes})
 
 
-def excluir_cliente(request):
+def excluir_cliente(request, id):
+    pessoa = Pessoa.objects.get(id=id)
+    pessoa.delete()
     return redirect(home_url)
