@@ -13,6 +13,11 @@
     text-align: center;
 }
 
+.title a{
+    text-decoration: none;
+    color:black;
+}
+
 .menu-options {
     display:flex;
     justify-content: space-between;
