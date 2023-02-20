@@ -123,6 +123,14 @@
     font-weight: bold;
 }
 
+.selecionado{
+    background-color: #feffb7;
+}
+
+#visualizarDados{
+    margin: 10px;
+}
+
 .rodape{
     width:80%;
     margin: 0 auto;
