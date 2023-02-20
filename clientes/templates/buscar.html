@@ -34,11 +34,11 @@
         <div class="find-search">
             <label for="find_text">Buscar: </label>
             <input type="text" id="find_text" name="find_text" class="search_box">
-            <input type="submit" class="button-search btn btn-primary btn-lg" value="Buscar"></input>
+            <input type="submit" class="button-search btn btn-primary" value="Buscar"></input>
         </div>
     </form>
         <div class="table-data">
-            <table>
+            <table id="table-data">
                 <thead>
                     <th>Id</th>
                     <th>Nome</th>
@@ -62,11 +62,71 @@
                     {%endfor%}
                 </tbody>
             </table>
-
-
+            
         </div>
+        <input type="hidden" id="url" data-url="{% url 'altera_cliente' 0%}">
+        <button type="button" id="visualizarDados" class="btn btn-primary">Visualizar</button>
+
     </div>
 
 
 </div>
+{%endblock%}
+{%block scripts %}
+<script>
+    var tabela = document.getElementById("table-data");
+    var linhas = tabela.getElementsByTagName("tr");
+    
+    for(var i = 0; i < linhas.length; i++){
+        var linha = linhas[i];
+        console.log(linha.innerHTML);
+      linha.addEventListener("click", function(){
+          //Adicionar ao atual
+            selLinha(this, false); //Selecione apenas um
+        //selLinha(this, true); //Selecione quantos quiser
+        });
+    }
+    
+    /**
+    Caso passe true, você pode selecionar multiplas linhas.
+    Caso passe false, você só pode selecionar uma linha por vez.
+    **/
+    function selLinha(linha, multiplos){
+        if(!multiplos){
+          var linhas = linha.parentElement.getElementsByTagName("tr");
+        for(var i = 0; i < linhas.length; i++){
+          var linha_ = linhas[i];
+          linha_.classList.remove("selecionado");    
+        }
+      }
+      linha.classList.toggle("selecionado");
+    }
+    
+    /**
+    Exemplo de como capturar os dados
+    **/
+    var btnVisualizar = document.getElementById("visualizarDados");
+    
+    btnVisualizar.addEventListener("click", function(){
+        var selecionados = tabela.getElementsByClassName("selecionado");
+      //Verificar se eestá selecionado
+      if(selecionados.length < 1){
+          alert("Selecione pelo menos uma linha");
+        return false;
+      }
+      
+      var id = 0;
+      
+      for(var i = 0; i < selecionados.length; i++){
+          var selecionado = selecionados[i];
+        selecionado = selecionado.getElementsByTagName("td");
+        console.log(selecionado[0].innerHTML);
+        id = selecionado[0].innerHTML;
+      }
+      var url = document.getElementById("url").dataset.url;
+      url = url.replace('0', id);
+      console.log(url);
+      window.location.replace(url);
+    });
+</script>
 {%endblock%}
